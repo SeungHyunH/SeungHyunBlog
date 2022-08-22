@@ -1,9 +1,10 @@
 import Login from './component/Login';
+import Main from './component';
 
 const routes = [
   {
     path: "/",
-    component: Login,
+    component: Main,
   },
   {
     path: "/login",
