@@ -1,9 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import { useNavigate } from "react-router-dom";
 const Header = () => {
+  const Navigate = useNavigate();
   return (
-    <Wrap>
+    <Wrap onClick={()=>{
+      Navigate("/login",{replace:true});
+    }}>
       <Logo src = {'MainLogo.svg'}/>
     </Wrap>
   )
