@@ -23,6 +23,11 @@ const Wrap = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100%;
+  -ms-user-select: none; 
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 `
 
 const ProfileWrap = styled.div`
