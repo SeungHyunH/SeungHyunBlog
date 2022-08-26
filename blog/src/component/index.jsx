@@ -49,7 +49,6 @@ const SideWrap = styled.div`
 
 const HeaderWrap = styled.div`
   height: 15%;
-  background-color: aliceblue;
 `
 
 const PageWrap = styled.div`

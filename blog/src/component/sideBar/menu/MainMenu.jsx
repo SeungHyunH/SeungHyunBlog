@@ -26,7 +26,7 @@ const Wrap = styled.div`
 `
 
 const OpenCloseImage = styled.img`
-  width: 1rem
+  width: 1.5rem
 `
 
 const Empty = styled.div`
