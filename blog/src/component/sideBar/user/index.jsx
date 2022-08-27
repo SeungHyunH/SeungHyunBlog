@@ -1,21 +1,27 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState,useEffect, useCallback } from 'react';
 import LoginUser from './LoginUser';
 import LogoutUser from './LogoutUser';
 import { useCookies } from 'react-cookie';
 const User = () => {
   const [cookies, setCookie, removeCookie] = useCookies(['user']);
   const [isLogin,setIsLogin] = useState(false);
+  
+  const Logout = useCallback(()=>{
+    setIsLogin(false);
+    removeCookie('user'); 
+  },[]);
+
   useEffect(()=>{
     if(cookies.user !== undefined){
       setIsLogin(true);
     }else{
       setIsLogin(false);
     }
-  },[cookies]);
+  },[cookies.user]);
   return (
     <>
       {
-        isLogin ? <LoginUser/> : <LogoutUser/>
+        isLogin ? <LoginUser logout = {Logout}/> : <LogoutUser/>
       }
     </>
   )

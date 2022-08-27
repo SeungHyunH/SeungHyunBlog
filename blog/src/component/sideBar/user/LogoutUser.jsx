@@ -5,8 +5,11 @@ const LogoutUser = () => {
   return (
     <Wrap>
       <SubWrap>
-        <LoginLink href='http://localhost:3001/user/auth/google'>로그인하러가기</LoginLink>
-        <Logo src = {'Login.svg'}/>
+        <LoginLink href='http://localhost:3001/user/auth/google'>
+          <LinkText>로그인하러가기</LinkText>
+          <Logo src = {'Login.svg'}/>
+        </LoginLink>
+        
       </SubWrap>
       <SubWrap>
         <Search type={'text'}></Search>
@@ -45,8 +48,11 @@ const SearchButton = styled.button`
 `
 
 const LoginLink = styled.a`
-  width: 60%;
-  text-align: center;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
   :hover{
     color: black;
     text-decoration: none;
@@ -65,9 +71,13 @@ const LoginLink = styled.a`
   }
 `
 
+const LinkText = styled.div`
+  width: 70%;
+  text-align: center;
+`
+
 const Logo = styled.img`
-  width: 12%;
-  height: 70%;
+  width: 13%;
 `
 
 export default LogoutUser
