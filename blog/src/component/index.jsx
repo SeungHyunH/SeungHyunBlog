@@ -1,30 +1,23 @@
-import React from 'react';
-import Footer from './footer';
+import React,{useState} from 'react';
 import Header from './header';
 import SideBar from './sideBar';
-import List from './list.jsx';
-import Main from './post';
+import Main from './main';
 import styled from 'styled-components';
 
-const Index = (props) => {
-
+const Index = () => {
+  const [menu,setMenu] = useState('all');
   return (
     <Wrap>
       <SideWrap>
-        <SideBar/>
+        <SideBar setMenu = {setMenu}/>
       </SideWrap>
       <MainWrap>
         <HeaderWrap>
-          <Header/>
+          <Header set = {setMenu}/>
         </HeaderWrap>
         <PageWrap>
-          {
-            (props.page === undefined|| props.page === 'list') ? <List/>:<Main/>
-          }
+          <Main set = {setMenu} menu = {menu}/>
         </PageWrap>
-        <FooterWrap>
-          <Footer/>
-        </FooterWrap>
       </MainWrap>
     </Wrap>
   )
@@ -52,13 +45,7 @@ const HeaderWrap = styled.div`
 `
 
 const PageWrap = styled.div`
-  height: 80%;
-  background-color: aqua;
-`
-
-const FooterWrap = styled.div`
-  height: 5%;
-  background-color:red;
+  height: 85%;
 `
 
 export default Index

@@ -36,7 +36,7 @@ const Redirect = () => {
         }
       });
     }
-  },[token])
+  },[token,Navigate,setCookie])
   return (
     <></>
   )

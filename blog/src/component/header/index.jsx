@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useNavigate } from "react-router-dom";
-const Header = () => {
+const Header = (props) => {
   const Navigate = useNavigate();
   return (
     <Wrap onClick={()=>{
-      Navigate("/login",{replace:true});
+      props.set('all');
+      Navigate("/",{replace:true});
     }}>
       <Logo src = {'MainLogo.svg'}/>
     </Wrap>
@@ -16,6 +17,9 @@ const Wrap = styled.div`
   background-color: #1C3879;
   width: 100%;
   height: 100%;
+  :hover{
+    cursor: pointer;
+  }
 `
 
 const Logo = styled.img`

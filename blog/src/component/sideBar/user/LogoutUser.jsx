@@ -9,7 +9,6 @@ const LogoutUser = () => {
           <LinkText>로그인하러가기</LinkText>
           <Logo src = {'Login.svg'}/>
         </LoginLink>
-        
       </SubWrap>
       <SubWrap>
         <Search type={'text'}></Search>

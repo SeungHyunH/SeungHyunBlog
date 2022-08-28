@@ -9,7 +9,7 @@ const User = () => {
   const Logout = useCallback(()=>{
     setIsLogin(false);
     removeCookie('user'); 
-  },[]);
+  },[removeCookie]);
 
   useEffect(()=>{
     if(cookies.user !== undefined){

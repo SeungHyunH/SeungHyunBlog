@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Profile from './profile';
 import User from './user';
 import Menu from './menu';
-const SideBar = () => {
+const SideBar = (props) => {
   return (
     <Wrap>
       <ProfileWrap>
@@ -13,7 +13,7 @@ const SideBar = () => {
         <User/>
       </UserWrap>
       <MenuWrap>
-        <Menu/>
+        <Menu setMenu = {props.setMenu}/>
       </MenuWrap>
     </Wrap>
   )
